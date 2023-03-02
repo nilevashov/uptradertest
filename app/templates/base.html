@@ -1,0 +1,24 @@
+{% include "head_template.html" %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            {% load menu_tags %}
+            <h2>Меню "Категории"</h2>
+            {% draw_menu 'Категории' %}
+            <h2>Меню "Родственники"</h2>
+            {% draw_menu 'Родственники' %}
+        </header>
+        <div class="main_section">
+            {% if menu_name == '' %}
+                <h1>Главная страница</h1>
+            {% else %}
+                <h1>"{{ title }}" категория меню "{{ menu_name }}"!</h1>
+            {% endif %}
+        </div>
+    </body>
+</html>

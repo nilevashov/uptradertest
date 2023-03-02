@@ -1,0 +1,18 @@
+.active {
+    color: red;
+    text-decoration: none;
+}
+
+a.active ~ ul {
+    display: block;
+}
+
+
+ul:has(a.active) {
+    display: block;
+}
+
+
+.menu_block__item {
+    display: none;
+}
